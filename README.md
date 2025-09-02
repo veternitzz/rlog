@@ -1,4 +1,4 @@
-# veternitzz/rlog
+# ``veternitzz/rlog``
 
 A simple log class for Lune.
 
