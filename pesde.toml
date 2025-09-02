@@ -1,6 +1,6 @@
 name = "veternitzz/log"
 version = "0.1.0"
-description = "A simple logger class for the Lune runtime."
+description = "A simple log class for the Lune runtime."
 authors = ["Anthony LaPeter <anthonylapeter@gmail.com>"]
 repository = "https://github.com/veternitzz/log"
 license = "MIT"
@@ -18,6 +18,7 @@ lune = "0.10.2"
 
 [target]
 environment = "lune"
+lib = "src/lib.luau"
 
 [indices]
 default = "https://github.com/pesde-pkg/index"
