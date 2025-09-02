@@ -23,7 +23,7 @@ export type RLogImpl = {
 
 export type Log = typeof(setmetatable(
     {} :: {
-        filePath: string,
+        filePath: string?,
         prettyOutput: string
     }, {} :: RLogImpl))
 
@@ -36,7 +36,7 @@ log.__index = log
     @param filePath Optional string which is a path to log to.
     @param prettyOutput Boolean which determines whether or not to make the console output pretty.
 ]]
-function log.new(filePath: string?, prettyOutput: boolean?)
+function log.new(filePath: string?, prettyOutput: boolean?): Log
     -- check optional params
     if not filePath or filePath == "" then filePath = nil end
     if not prettyOutput then prettyOutput = false end
@@ -51,14 +51,14 @@ function log.new(filePath: string?, prettyOutput: boolean?)
     self.filePath = filePath
     self.prettyOutput = prettyOutput
 
-    return self
+    return self :: Log
 end
 
 --[[
     Logs an info message. If ``prettyOutput`` is enabled, it will show as bold and blue.
 
     @param self
-    @message The string to log.
+    @param message The string to log.
 ]]
 function log.info(self, message: string)
     logFn(self, "INFO", BLUE, BOLD, message)
