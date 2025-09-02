@@ -1,4 +1,4 @@
-name = "veternitzz/log"
+name = "veternitzz/rlog"
 version = "0.1.0"
 description = "A simple log class for the Lune runtime."
 authors = ["Anthony LaPeter <anthonylapeter@gmail.com>"]
