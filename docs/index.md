@@ -2,6 +2,6 @@
 sidebar-position: 1
 ---
 
-# veternitzz/rlog
+# Getting Started
 
 A simple log class for Lune.
