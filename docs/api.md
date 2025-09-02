@@ -20,7 +20,7 @@ new: (filePath: string?, prettyOutput: boolean) -> Log
 
 ## Methods
 
-### :info()
+### info()
 
 Logs an info message. If ``prettyOutput`` is enabled, it will show as bold and blue.
 
@@ -32,7 +32,7 @@ Logs an info message. If ``prettyOutput`` is enabled, it will show as bold and b
 info: (self: Log, message: string)
 ```
 
-### :warn()
+### warn()
 
 Logs a warning message. If ``prettyOutput`` is enabled, it will show as bold and yellow.
 
@@ -44,7 +44,7 @@ Logs a warning message. If ``prettyOutput`` is enabled, it will show as bold and
 warn: (self: Log, message: string)
 ```
 
-### :error()
+### error()
 
 Logs an error message. If ``prettyOutput`` is enabled, it will show as bold and red.
 
@@ -56,7 +56,7 @@ Logs an error message. If ``prettyOutput`` is enabled, it will show as bold and 
 error: (self: Log, message: string)
 ```
 
-### :debug()
+### debug()
 
 Logs a debug message. If ``prettyOutput`` is enabled, it will show as bold and white.
 
