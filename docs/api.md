@@ -10,8 +10,8 @@ sidebar-position: 2
 
 Constructs a new log instance.
 
-**Parameters**
-``filePath`` An optional string which is a path to log to.
+**Parameters**  
+``filePath`` An optional string which is a path to log to.  
 ``prettyOutput`` A boolean which determines whether or not to make the console output pretty.
 
 ```luau
@@ -24,8 +24,8 @@ new: (filePath: string?, prettyOutput: boolean) -> Log
 
 Logs an info message. If ``prettyOutput`` is enabled, it will show as bold and blue.
 
-**Parameters**
-``self``
+**Parameters**  
+``self``  
 ``message`` The string to log.
 
 ```luau
@@ -36,8 +36,8 @@ info: (self: Log, message: string)
 
 Logs a warning message. If ``prettyOutput`` is enabled, it will show as bold and yellow.
 
-**Parameters**
-``self``
+**Parameters**  
+``self``  
 ``message`` The string to log.
 
 ```luau
@@ -48,8 +48,8 @@ warn: (self: Log, message: string)
 
 Logs an error message. If ``prettyOutput`` is enabled, it will show as bold and red.
 
-**Parameters**
-``self``
+**Parameters**  
+``self``  
 ``message`` The string to log.
 
 ```luau
@@ -60,8 +60,8 @@ error: (self: Log, message: string)
 
 Logs a debug message. If ``prettyOutput`` is enabled, it will show as bold and white.
 
-**Parameters**
-``self``
+**Parameters**  
+``self``  
 ``message`` The string to log.
 
 ```luau
