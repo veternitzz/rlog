@@ -1,6 +1,11 @@
 # ``veternitzz/rlog``
+[pesde](https://pesde.dev/packages/veternitzz/rlog/0.1.0/lune)
 
 A simple log class for Lune.
+
+## Documentation
+
+The documentation for this project is available on pesde.
 
 ## Installation
 
