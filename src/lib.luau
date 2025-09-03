@@ -12,6 +12,8 @@ local YELLOW = io.color("yellow")
 local BOLD = io.style("bold")
 local WHITE = io.color("white")
 
+export type LevelKind = "INFO" | "DEBUG" | "ERROR" | "WARN"
+
 export type RLogImpl = {
     __index: Log,
 
