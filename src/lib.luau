@@ -60,7 +60,7 @@ end
     @param self
     @param message The string to log.
 ]]
-function log.info(self, message: string)
+function log.info(self: Log, message: string)
     logFn(self, "INFO", BLUE, BOLD, message)
 end
 
@@ -68,9 +68,9 @@ end
     Logs an error message. If ``prettyOutput`` is enabled, it will show as bold and red.
 
     @param self
-    @message The string to log.
+    @param message The string to log.
 ]]
-function log.error(self, message: string)
+function log.error(self: Log, message: string)
     logFn(self, "ERROR", RED, BOLD, message)
 end
 
@@ -78,9 +78,9 @@ end
     Logs a warning message. If ``prettyOutput`` is enabled, it will show as bold and yellow.
 
     @param self
-    @message The string to log.
+    @param message The string to log.
 ]]
-function log.warn(self, message: string)
+function log.warn(self: Log, message: string)
     logFn(self, "WARN", YELLOW, BOLD, message)
 end
 
@@ -88,9 +88,9 @@ end
     Logs a debug message. If ``prettyOutput`` is enabled, it will show as bold and white.
 
     @param self
-    @message The string to log.
+    @param message The string to log.
 ]]
-function log.debug(self, message: string)
+function log.debug(self: Log, message: string)
     logFn(self, "DEBUG", WHITE, BOLD, message)
 end
 
