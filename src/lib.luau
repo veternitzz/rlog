@@ -15,6 +15,8 @@ local WHITE = io.color("white")
 export type RLogImpl = {
     __index: Log,
 
+    new: (filePath: string?, prettyOutput: boolean) -> Log,
+
     info: (self: Log, message: string) -> (),
     error: (self: Log, message: string) -> (),
     warn: (self: Log, message: string) -> (),
