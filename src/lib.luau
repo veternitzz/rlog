@@ -1,7 +1,7 @@
 local fs = require("@lune/fs")
 local io = require("@lune/stdio")
 
-local util = require("@self/util")
+local util = require("./util")
 
 local logFn = util.logFn
 
