@@ -47,8 +47,7 @@ log.__index = log
 --[[
     Constructs a new log instance.
 
-    @param filePath Optional string which is a path to log to.
-    @param prettyOutput Boolean which determines whether or not to make the console output pretty.
+    @param config Configuration of the log.
 ]]
 function log.new(config: RLogConfig): Log
 
