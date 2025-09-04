@@ -14,10 +14,15 @@ local WHITE = io.color("white")
 
 export type LevelKind = "INFO" | "DEBUG" | "ERROR" | "WARN"
 
+export type RLogConfig = {
+    filePath: string?,
+    prettyOutput: boolean
+}
+
 export type RLogImpl = {
     __index: Log,
 
-    new: (filePath: string?, prettyOutput: boolean) -> Log,
+    new: (config: RLogConfig) -> Log,
 
     info: (self: Log, message: string) -> (),
     error: (self: Log, message: string) -> (),
@@ -45,20 +50,21 @@ log.__index = log
     @param filePath Optional string which is a path to log to.
     @param prettyOutput Boolean which determines whether or not to make the console output pretty.
 ]]
-function log.new(filePath: string?, prettyOutput: boolean?): Log
+function log.new(config: RLogConfig): Log
+
     -- check optional params
-    if not filePath or filePath == "" then filePath = nil end
-    if not prettyOutput then prettyOutput = false end
+    if not config["filePath"] or config["filePath"] == "" then config["filePath"] = nil end
+    if not config["prettyOutput"] then config["prettyOutput"] = false end
 
     -- make sure the file exists, if not then make it
-    if filePath then
-        fs.writeFile(filePath, "")
+    if config["filePath"] then
+        fs.writeFile(config["filePath"], "")
     end
 
     -- make class
     local self = setmetatable({}, log)
-    self.filePath = filePath
-    self.prettyOutput = prettyOutput
+    self.filePath = config["filePath"]
+    self.prettyOutput = config["prettyOutput"]
 
     return self :: Log
 end
