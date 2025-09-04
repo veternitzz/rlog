@@ -33,7 +33,7 @@ export type RLogImpl = {
 export type Log = typeof(setmetatable(
     {} :: {
         filePath: string?,
-        prettyOutput: string,
+        prettyOutput: boolean,
 
         info: (self: Log, message: string) -> (),
         error: (self: Log, message: string) -> (),
